@@ -2,3 +2,5 @@
 =============
 
 Shows key code
+
+![Preview](/preview.png)
