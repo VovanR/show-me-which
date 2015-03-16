@@ -102,7 +102,7 @@
             var $value = $('.keycode');
             $value.fitText(0.3);
 
-            $(document.body).on('keypress', function (e) {
+            $(document.body).on('keydown', function (e) {
                 $value.text(e.which);
             });
 
