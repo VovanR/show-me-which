@@ -1,6 +1,9 @@
-# [Show Me Which](https://VovanR.github.io/show-me-which)
+# Show Me Which
 
 > Shows key code
+
+## Demo
+[show-me-which](https://VovanR.github.io/show-me-which)
 
 ![Preview](/preview.png)
 
