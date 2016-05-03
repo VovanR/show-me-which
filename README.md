@@ -2,8 +2,7 @@
 
 > Shows key code
 
-## Demo
-[show-me-which](https://VovanR.github.io/show-me-which)
+Demo: [show-me-which](http://vovanr.github.io/show-me-which)
 
 ![](preview.png)
 
