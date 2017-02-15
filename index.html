@@ -70,6 +70,33 @@
         text-shadow: none;
         background-color: rgba(255, 255, 255, 0.5);
     }
+
+
+    .copyright {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        opacity: 0.4;
+        font-family: monospace;
+        transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+        font-size: 100%;
+        padding: 1em;
+        text-decoration: none;
+        color: #000;
+        white-space: nowrap;
+    }
+
+    .copyright:hover {
+        opacity: 1;
+        text-decoration: none;
+    }
+
+    .copyright__license {
+    }
+
+    .copyright__author {
+        text-decoration: underline;
+    }
     </style>
 </head>
 <body>
@@ -83,6 +110,16 @@
 </div>
 
 <textarea class="input" placeholder="Press any key to see its `keyCode`" autocomplete="off" autofocus></textarea>
+
+<a
+    class="copyright"
+    href="https://github.com/vovanr/show-me-which"
+    target="_blank"
+    rel="noopener noreferrer"
+    tabindex="-1"
+    >
+    <span class="copyright__license">MIT ©</span> <span class="copyright__author">Vladimir Rodkin</span>
+</a>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js"></script>
