@@ -1,141 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Show Me Which</title>
-    <meta name="description" content="Shows key code">
+  <title>Show Me Which</title>
+  <meta name="description" content="Shows key code">
 
-    <style>
+  <style>
     .flex-container-wrap {
-        flex-grow: 1;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        overflow: hidden;
+      flex-grow: 1;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
     }
 
     .flex-container {
-        display: flex;
-        flex-flow: column wrap;
-        position: relative;
-        height: 100%;
-        width: 100%;
+      display: flex;
+      flex-flow: column wrap;
+      position: relative;
+      height: 100%;
+      width: 100%;
     }
 
     .flex-item {
-        display: flex;
-        flex: 1 0 10px;
-        align-items: center;
-        justify-content: center;
-        position: relative;
+      display: flex;
+      flex: 1 0 10px;
+      align-items: center;
+      justify-content: center;
+      position: relative;
     }
 
     .keycode {
-        font-family: monospace;
-        text-align: center;
+      font-family: monospace;
+      text-align: center;
     }
 
     .input {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        box-sizing: border-box;
-        /* word-break: break-all; */
-        background: none;
-        border: 2px solid #fff;
-        padding: 1em;
-        font-family: monospace;
-        font-size: 2em;
-        display: block;
-        resize: none;
-        outline: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      /* word-break: break-all; */
+      background: none;
+      border: 2px solid #fff;
+      padding: 1em;
+      font-family: monospace;
+      font-size: 2em;
+      display: block;
+      resize: none;
+      outline: none;
     }
+
     .input:focus {
-        border: 2px solid #ff3304;
+      border: 2px solid #ff3304;
     }
 
     .input::selection {
-        text-shadow: none;
-        background-color: rgba(255, 255, 255, 0.5);
+      text-shadow: none;
+      background-color: rgba(255, 255, 255, 0.5);
     }
+
     .input::-moz-selection {
-        text-shadow: none;
-        background-color: rgba(255, 255, 255, 0.5);
+      text-shadow: none;
+      background-color: rgba(255, 255, 255, 0.5);
     }
 
 
     .copyright {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        opacity: 0.4;
-        font-family: monospace;
-        transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-        font-size: 100%;
-        padding: 1em;
-        text-decoration: none;
-        color: #000;
-        white-space: nowrap;
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      opacity: 0.4;
+      font-family: monospace;
+      transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+      font-size: 100%;
+      padding: 1em;
+      text-decoration: none;
+      color: #000;
+      white-space: nowrap;
     }
 
     .copyright:hover {
-        opacity: 1;
-        text-decoration: none;
+      opacity: 1;
+      text-decoration: none;
     }
 
     .copyright__license {
     }
 
     .copyright__author {
-        text-decoration: underline;
+      text-decoration: underline;
     }
-    </style>
+  </style>
 </head>
 <body>
 
 <div class="flex-container-wrap">
-    <div class="flex-container">
-        <div class="flex-item keycode">
-            192
-        </div>
+  <div class="flex-container">
+    <div class="flex-item keycode">
+      192
     </div>
+  </div>
 </div>
 
 <textarea class="input" placeholder="Press any key to see its `keyCode`" autocomplete="off" autofocus></textarea>
 
 <a
-    class="copyright"
-    href="https://github.com/vovanr/show-me-which"
-    target="_blank"
-    rel="noopener noreferrer"
-    tabindex="-1"
-    >
-    <span class="copyright__license">MIT ©</span> <span class="copyright__author">Vladimir Rodkin</span>
+  class="copyright"
+  href="https://github.com/vovanr/show-me-which"
+  target="_blank"
+  rel="noopener noreferrer"
+  tabindex="-1"
+>
+  <span class="copyright__license">MIT ©</span> <span class="copyright__author">Vladimir Rodkin</span>
 </a>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js"></script>
 <script>
-$(function () {
+  $(function () {
     var $value = $('.keycode');
     $value.fitText(0.3);
 
     $(document.body).on('keydown', function (e) {
-        $value.text(e.which);
+      $value.text(e.which);
     });
 
     var $input = $('.input');
     $input.fitText(2, {
-        minFontSize: '9px',
+      minFontSize: '9px',
     });
-}());
+  }());
 </script>
 
 </body>
