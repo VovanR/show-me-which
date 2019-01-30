@@ -2,9 +2,11 @@
 
 > Shows key code
 
-Demo: [show-me-which](http://vovanr.github.io/show-me-which)
+Demo: [vovanr.github.io/show-me-which][demo]
 
 ![](preview.png)
 
 ## License
 MIT © [Vladimir Rodkin](https://github.com/VovanR)
+
+[demo]: https://vovanr.github.io/show-me-which
