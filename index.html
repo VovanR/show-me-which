@@ -111,6 +111,20 @@
       background-clip: padding-box;
       z-index: 10;
     }
+
+
+    noscript {
+      --space-around: 5px;
+
+      font-size: 1.25em;
+      text-align: center;
+      background-color: #FFC107;
+      padding: 1em 0.5em;
+      position: fixed;
+      top: var(--space-around);
+      left: var(--space-around);
+      right: var(--space-around);
+    }
   </style>
 </head>
 <body>
@@ -155,5 +169,8 @@
   }());
 </script>
 
+  <noscript>
+    Please&nbsp;enable&nbsp;<strong>JavaScript</strong> in&nbsp;your&nbsp;browser.
+  </noscript>
 </body>
 </html>
